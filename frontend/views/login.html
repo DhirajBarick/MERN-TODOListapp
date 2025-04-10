@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="todo-container">
+        <h2>Login</h2>
+        <form ng-submit="login()">
+            <div class="error-message" ng-show="errorMessage">{{ errorMessage }}</div>
+            <input type="text" ng-model="user.username" placeholder="Username" required>
+            <input type="password" ng-model="user.password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <a href="#!/register">Don't have an account? Register</a>
+    </div>
+  </body>
+</html>

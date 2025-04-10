@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        margin: 0;
+        background-color: #f5f5f5;
+      }
+      .todo-container {
+        max-width: 400px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      input,
+      button,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #e9ecef;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      a {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #007bff;
+      }
+      .logout-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: auto;
+        padding: 8px 16px;
+        background-color: #ee031b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      .logout-btn:hover {
+        background-color: #c01a2a;
+      }
+      .error-message {
+        color: red;
+        text-align: center;
+      }
+      .deletebtn {
+        background-color: #ee031b;
+      }
+      .deletebtn:hover {
+        background-color: #c01a2a;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/controllers/registerController.js"></script>
+    <script src="app/controllers/loginController.js"></script>
+    <script src="app/controllers/homeController.js"></script>
+    <script src="app/services/authService.js"></script>
+    <script src="app/services/todoService.js"></script>
+  </head>
+  <body>
+    <div ng-view></div>
+  </body>
+</html>

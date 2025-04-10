@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <button
+      class="logout-btn"
+      style="float: right; margin: 10px"
+      ng-click="logout()"
+    >
+      Logout
+    </button>
+    <h2>To-Do List</h2>
+    <div class="todo-container">
+      <form ng-submit="addTodo()">
+        <input
+          type="text"
+          ng-model="newTodo"
+          placeholder="Add new task"
+          required
+        />
+        <button type="submit">Add</button>
+      </form>
+      <form ng-submit="searchTask()" style="margin-top: 5px">
+        <input
+          type="text"
+          ng-model="searchText"
+          placeholder="Search task"
+          required
+        />
+        <button ng-click="submit">Search</button>
+      </form>
+      <button ng-click="clearSearch()">Clear</button>
+
+      <button ng-click="sortTodos()">Sort Alphabetically</button>
+      <ul class="list">
+        <li ng-repeat="todo in filteredTodos track by $index">
+          {{ todo.task }}
+          <span style="display: inline-flex; gap: 4px; margin-left: 10px">
+            <button
+              style="font-size: 1em; padding: 2px 6px"
+              ng-click="moveUp($index)"
+            >
+              ⬆️
+            </button>
+            <button
+              style="font-size: 1em; padding: 2px 6px"
+              ng-click="moveDown($index)"
+            >
+              ⬇️
+            </button>
+            <button
+              class="deletebtn"
+              style="
+                font-size: 1em;
+                padding: 2px 6px;
+                color: white;
+                border: none;
+                border-radius: 3px;
+              "
+              ng-click="deleteTodo(todo._id)"
+            >
+              Delete
+            </button>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
