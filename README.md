@@ -54,9 +54,10 @@ This is a full-stack to-do list application built using AngularJS for the fronte
 2. Install dependencies:
    ```bash
    npm install express mongoose cors bcrypt jsonwebtoken
+   npm install nodemon -D
    ```
 
-3. Run MongoDB (local) and start the server:
+3. Run MongoDB (local) and start the development server:
    ```bash
    node server.js
    ```
