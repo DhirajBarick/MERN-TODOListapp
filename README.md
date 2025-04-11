@@ -59,7 +59,7 @@ This is a full-stack to-do list application built using AngularJS for the fronte
 
 3. Run MongoDB (local) and start the development server:
    ```bash
-   node server.js
+   npm run dev
    ```
 
 > Server runs on `http://localhost:3000`
