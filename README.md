@@ -1,4 +1,4 @@
-# Full Stack To-Do App (AngularJS + Node.js + Express + MongoDB)
+# MEAN Stack To-Do App (AngularJS + Node.js + Express + MongoDB)
 
 This is a full-stack to-do list application built using AngularJS for the frontend, Node.js and Express for the backend, and MongoDB for data storage. It supports user registration, login with JWT authentication, and CRUD operations for tasks. It also includes drag-and-drop, sorting, search, and UI features like logout and error handling.
 
