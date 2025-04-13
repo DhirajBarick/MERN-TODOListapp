@@ -131,6 +131,15 @@ PUT /api/todos/reorder
 - Home Page with responsive task list
 - UI includes styled buttons, error handling, and layout design
 
+### 🔐 Login Page
+![Login Page](./screenshots/login.png)
+
+### 📝 Register Page
+![Register Page](./screenshots/register.png)
+
+### 📋 Home Page (Todo List)
+![Home Page](./screenshots/hometodo.png)
+
 ---
 
 ## 📄 License
